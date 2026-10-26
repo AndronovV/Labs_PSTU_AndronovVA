@@ -1,43 +1,36 @@
 #include <iostream>
-
-int used_float(){
-    float a = 1000.0;
-    float bf = 0.0001;
-
-    float prsum1 = (a+bf)*(a+bf); //Нахождение значения уменьщаемого
-    float prsum2 = (a*a + 2*a*bf); //Нахождение значения вычитаемого
-    float numerator = prsum1 - prsum2; //Нахождение значения числителя дроби
-    float denominator = bf*bf; //Нахождение знаменателя
-    float res = numerator / denominator; //Нахождение результата
-
-    std::cout << prsum1 << std::endl;
-    std::cout << prsum2 << std::endl;
-    std::cout << numerator << std::endl;
-    std::cout << denominator << std::endl;
-    std::cout << res << std::endl;
-    return 0;
-}
-int used_double(){
-    float a = 1000.0;
-    double bf = 0.0001;
-
-    double prsum1 = (a+bf)*(a+bf); //Нахождение значения уменьщаемого
-    double prsum2 = (a*a + 2*a*bf); //Нахождение значения вычитаемого
-    double numerator = prsum1 - prsum2; //Нахождение числителя
-    double denominator = bf*bf; //Нахождение знаменателя
-    double res = numerator / denominator; //Нахождение результата
-
-    std::cout << prsum1 << std::endl; 
-    std::cout << prsum2 << std::endl; 
-    std::cout << numerator << std::endl;
-    std::cout << denominator << std::endl;
-    std::cout << res << std::endl;
-    return 0;
-}
+using namespace std;
 
 int main(){
-    used_float();
-    std::cout<< " " << std::endl;
-    used_double();
+    int a = 1000;
+    float b1 = 0.0001;
+
+    float prsum1 = (a+b1)*(a+b1); //Нахождение значения уменьщаемого
+    float prsum2 = (a*a + 2*a*b1); //Нахождение значения вычитаемого
+    float numerator = prsum1 - prsum2; //Нахождение значения числителя дроби
+    float denominator = b1*b1; //Нахождение знаменателя
+    float res = numerator / denominator; //Нахождение результата
+
+    cout << prsum1 << endl;
+    cout << prsum2 << endl;
+    cout << numerator << endl;
+    cout << denominator << endl;
+    cout << res << endl;
+
+    cout << ' ' << endl;
+
+    double b2 = 0.0001;
+
+    double prsum1D = (a+b2)*(a+b2); //Нахождение значения уменьщаемого
+    double prsum2D = (a*a + 2*a*b2); //Нахождение значения вычитаемого
+    double numeratorD = prsum1D - prsum2D; //Нахождение числителя
+    double denominatorD = b2*b2; //Нахождение знаменателя
+    double resD = numeratorD / denominatorD; //Нахождение результата
+
+    cout << prsum1D << endl; 
+    cout << prsum2D << endl; 
+    cout << numeratorD << endl;
+    cout << denominatorD << endl;
+    cout << resD << endl;
     return 0;
 }
