@@ -4,22 +4,22 @@ using namespace std;
 
 int main()
 {   
-    float e = 0.0001;
-    for (float x = 0.1; x <= 1; x += 0.09)
+    double a = 0.1, b = 1.0, e = 0.0001;
+    int k = 10;
+    double step = (b-a)/k;
+    for (double x = a; x <= b; x += step)
     {
-        float sn = 1, se = 1, an = 1; 
-        for (int i = 1; i <= 10; i++)
+        double sn = 1.0, se = 1.0, an = 1.0; 
+        for (int i = 1; i <= 10; ++i)
         {   
             an *= log(3)*x/i;
             sn += an;
         }
-        an = 1;
-        int n = 1;
-        while (fabs(an) > e)
+        an = 1.0;
+        for (int i = 1; (fabs(an) > e); ++i)
         {
-            an *= log(3)*(x-e)/n;
+            an *= log(3)*x/i;
             se += an;
-            n += 1;
         }
 
         cout << "x = " << x << ", sn = " << sn << ", se = " << se << ", y = " << pow(3, x) << endl;
