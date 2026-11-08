@@ -43,6 +43,7 @@
 build/
 Build/
 build-*/
+.vscode/
 
 # CMake generated files
 CMakeFiles/
@@ -67,3 +68,7 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# отчёты и блок-схемы
+.docx
+.drawio
