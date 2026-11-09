@@ -7,6 +7,7 @@ int main()
     setlocale(LC_ALL, ".65001");
     int a[100];
     int n, k;
+    cin >> n;
     //Первая и вторая часть задания
     for (int i = 0; i < n; ++i)
     {
@@ -22,8 +23,9 @@ int main()
         a[i] = a[i+1];
     }
     
+    n -= 1;
     //Четвёртая и пятая часть задания
-    n = n + n/2-1;
+    n = n + n/2;
     for (int i = 0; i < n; ++i)
         if ((i+1)%3 == 0)
             {

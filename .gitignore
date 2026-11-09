@@ -70,5 +70,6 @@ Testing/
 .cache/
 
 # отчёты и блок-схемы
-.docx
-.drawio
+*.docx
+*.drawio
+*.drawio.bkp

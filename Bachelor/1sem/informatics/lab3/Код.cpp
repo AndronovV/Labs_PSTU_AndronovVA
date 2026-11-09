@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {   
-    double a = 0.1, b = 1.0, e = 0.0001;
+    double a = 0.1, b = 1.0, e = 0.00001;
     int k = 10;
     double step = (b-a)/k;
     for (double x = a; x <= b; x += step)
